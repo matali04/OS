@@ -26,4 +26,4 @@ Pour la partie réseau, pour simplifier les commandes et ne pas avoir 2 commande
 
 Le code intègre intégralement la partie réseau, que ça soit les messages privés, les broadcasts, et même l'arrêt du serveur avec la commande `beuip stop` ou automatiquement à l'arrêt du terminal.
 
-> TP réalisé par : VALTER Mathéo
+> *TP réalisé par : VALTER Mathéo*
