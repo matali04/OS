@@ -13,17 +13,17 @@
 
 ## L'utilisation :
 
-La première étape sera d'éffectuer un :
+La première étape sera d'effectuer un :
     `make`
 
 Ensuite, il vous faudra lancer l'executable :
-    `./biceps.c`
+    `./biceps`
 
 Au lancement, la liste des commandes vous sera affiché dans votre terminal.
 Pour la partie réseau, pour simplifier les commandes et ne pas avoir 2 commandes différentes (beuip et msg), j'ai tout regroupé sous la commande beuip. Ainsi que ça soit pour lancer, arrêter ou envoyer, la commande de base reste beuip. Exemple :
     `beuip start`
     `beuip 5 test`
 
-Le code intègre intégralement la partie réseau, que ça soit les messages privés, les broadcasts, et même l'arrêt du serveur avec la commande `beuip stop` ou automatiquement à l'éarrêt du terminal.
+Le code intègre intégralement la partie réseau, que ça soit les messages privés, les broadcasts, et même l'arrêt du serveur avec la commande `beuip stop` ou automatiquement à l'arrêt du terminal.
 
 > TP réalisé par : VALTER Mathéo
