@@ -1,0 +1,15 @@
+beuip start
+beuip stop
+beuip start
+beuip 3
+beuip 5 test
+beuip 5
+beuip stop
+beuip start
+beuip 3
+beuip stop
+beuip start
+ps -l
+beuip start
+beuip 5 test
+beuip 3

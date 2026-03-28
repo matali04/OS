@@ -1,4 +1,4 @@
-all : biceps servbeuip clientbeuip
+all : biceps servbeuip
 
 biceps.o : biceps.c gescom.h
 gescom.o : gescom.c gescom.h creme.h
@@ -12,9 +12,6 @@ creme.o : creme.c creme.h
 servbeuip : servbeuip.c
 	cc -Wall -Werror -o servbeuip servbeuip.c
 
-clientbeuip : clientbeuip.c
-	cc -Wall -Werror -o clientbeuip clientbeuip.c
-
 
 
 biceps: biceps.o gescom.o creme.o
@@ -25,4 +22,4 @@ biceps-valgrind: biceps
 
 
 cln :
-	rm -f *.o biceps clientbeuip servbeuip
+	rm -f *.o biceps servbeuip

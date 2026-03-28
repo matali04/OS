@@ -54,9 +54,9 @@ int analyse_commande(char* cmd, char* delim){
 
 void interruption(){
     printf("\n\nIf you want to leave the bash, use 'exit' command\n\n");
-    rl_on_new_line();       // New line
-    rl_replace_line("", 0); // Del actual txt
-    rl_redisplay();         // Display the prompt
+    rl_on_new_line();
+    rl_replace_line("", 0);
+    rl_redisplay();
 }
 
 

@@ -20,7 +20,7 @@ int send_serveur(int argc, char*argv[]){
     /* creation du socket */
     if((sid=socket(AF_INET,SOCK_DGRAM,IPPROTO_UDP)) < 0){
         perror("socket");
-        return(2);
+        return(0);
     }
 
     /* initialisation de SockConf pour le bind */
@@ -33,8 +33,9 @@ int send_serveur(int argc, char*argv[]){
         
         sprintf(buf, "3BEUIP");
         sendto(sid, buf, strlen(buf), 0, (struct sockaddr *)&Sock, sizeof(Sock));
+        return 1;
 
-    } else if (strcmp(argv[1], "4")==0 && argc == 5){ // Envoyer un message privé
+    } else if (strcmp(argv[1], "4")==0 && argc == 4){ // Envoyer un message privé
 
         char* pseudo = argv[2];
         char* message = argv[3];
@@ -48,12 +49,23 @@ int send_serveur(int argc, char*argv[]){
         int taille_totale = debut_message + len_message;
 
         sendto(sid, buf, taille_totale, 0, (struct sockaddr *)&Sock, sizeof(Sock));
-    } else if (strcmp(argv[1], "5")==0 && argc == 4){
+        return 1;
+
+    } else if (strcmp(argv[1], "5")==0 && argc == 3){
+
         sprintf(buf, "5BEUIP%s", argv[2]);
         sendto(sid, buf, strlen(buf), 0, (struct sockaddr *)&Sock, sizeof(Sock));
-    }
+        return 1;
 
-    return 0;
+    } else {
+        fprintf(stderr,"Utilisation :\n");
+        fprintf(stderr,"-   Démarrer le serveur : %s strat serveur_name\n", argv[0]);
+        fprintf(stderr,"-   Éteindre le serveur : %s stop\n", argv[0]);
+        fprintf(stderr,"-   Affichage des couples dans la table : %s 3\n", argv[0]);
+        fprintf(stderr,"-   Envoyer un message privé : %s 4 pseudo message\n", argv[0]);
+        fprintf(stderr,"-   Envoyer un message public : %s 5 message\n", argv[0]);
+        return 0;
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
