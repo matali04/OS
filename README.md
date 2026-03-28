@@ -2,4 +2,4 @@
 
 Vous trouverez dans ce répertoire un fichier pour les TP2 et les potentiels futurs TP à rendre.
 
-> *TPs réalisé par : VALTER Mathéo*
+> *TPs réalisés par : VALTER Mathéo*
