@@ -39,5 +39,6 @@ Cependant, il est à noter que je n'ai pas pu régler tous les petits soucis d'a
 Malgré cela, toute la logique réseau (Mutex, sockets, processus fils, redirections) est correctement en place, gérée de manière sécurisée, et normalement tout marche !
 
 > *TP réalisé par : VALTER Mathéo*
+
 NOM: VALTER
 PRENOM: MATHEO
